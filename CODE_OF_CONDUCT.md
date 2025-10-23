@@ -16,7 +16,7 @@ Welcome — thank you for contributing to SULPM. This Code of Conduct sets expec
 4. **Licensing**  
    - All projects and packages contributed to this repository must be licensed under the MIT License. You may include your name or authorship information in packages, but contributions are expected to be shareable and reusable under MIT terms.
 
-4.5 **If you want to have your own liscense**
+4.5. **If you want to have your own liscense**
    - If you wish to have your own liscense, you will have to make your own github repository for SULPM, you can be found with: sulpm package username repositoryname. If you do this on your own repo, you may have any liscense you want and only have to obey U.S. Law (Including copyright of other people's things.) instead of these clauses.
 
 5. **Be respectful**  
