@@ -9,8 +9,10 @@ import json
 pyver = f"python{sys.version_info.major}.{sys.version_info.minor}"
 
 BASE_URL = 'https://raw.githubusercontent.com/Darkwing14/SULPM/main/'
-
+if len(sys.argv) > 3:
+    BASE_URL = f'https://raw.githubusercontent.com/{sys.argv[2]}/{sys.argv[3]}/main/'
 package_name = sys.argv[1]
+
 executable_folder = '/usr/bin/'
 print('(i) SULPM: Init.')
 
