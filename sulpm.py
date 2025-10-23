@@ -6,6 +6,10 @@ import os
 import sys
 import json
 
+if not os.path.exists("~/.sulpmlog"):
+    with open('~/.sulpmlog', 'w') as f:
+        pass
+
 pyver = f"python{sys.version_info.major}.{sys.version_info.minor}"
 
 def download(url, location, sudo=True):
