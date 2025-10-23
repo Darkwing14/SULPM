@@ -15,7 +15,7 @@ def download(url, location, sudo=True):
         sys.exit(1)
 
 def fetch_metadata(filename):
-    temp = '.tempdownloadsulpm'
+    temp = '~/.tempdownloadsulpm'
     download(BASE_URL + filename, temp, sudo=False)
     with open(temp, 'r') as f:
         content = f.read()
@@ -35,7 +35,7 @@ if len(sys.argv) > 1 and sys.argv[1].lower() == 'remove':
         print("(!) SULPM: No log file found — nothing to remove.")
         sys.exit(0)
 
-    with open('.sulpmlog', 'r') as f:
+    with open('~/.sulpmlog', 'r') as f:
         lines = f.read().splitlines()
 
     new_lines = []
@@ -69,7 +69,7 @@ if len(sys.argv) > 1 and sys.argv[1].lower() == 'remove':
             new_lines.append(lines[i + 1])
         i += 2
 
-    with open('.sulpmlog', 'w') as f:
+    with open('~/.sulpmlog', 'w') as f:
         f.write('\n'.join(new_lines) + '\n')
 
     if removed_any:
