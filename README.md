@@ -8,4 +8,4 @@ SULPM packages also don't really need to be archived, you just have to get it on
 
 Changelog:
 1.1.0 - Add dynamic base URL support. e.g. sulpm project user repository (default is still supported, with user being Darkwing14 and repository being SULPM).
-1.2.0 - Add deletion functionality.
+1.2.0 - Add deletion functionality. e.g. sulpm remove project
