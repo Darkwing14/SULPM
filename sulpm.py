@@ -143,7 +143,7 @@ for file in JSON:
     if handle == 'meta':
         Meta[file] = JSON[file]
 
-with open('.sulpmlog', 'a') as f:
+with open('~/.sulpmlog', 'a') as f:
     f.write(package_name + '\n' + json.dumps(Meta) + '\n')
 
 print('(SUCCESS) SULPM')
