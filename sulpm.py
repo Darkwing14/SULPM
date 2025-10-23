@@ -85,7 +85,7 @@ for file in JSON:
         Meta[file] = JSON[file]
 
 with open('.sulpmlog', 'a') as f:
-    f.write(json.dumps(Meta) + '\n')
+    f.write(package_name + '\n' + json.dumps(Meta) + '\n')
 
 print('(SUCCESS) SULPM')
 
