@@ -93,7 +93,7 @@ JSON = json.loads(fetch_metadata(package_name + '.sulpm'))
 Meta = {}
 
 local = input('(Y/N) SULPM: Install locally? (Type yes if you want to avoid using sudo.)\n'
-              'Not all programs may support this; if this errors, try saying no.\n> ').lower().startswith('y')
+              'Not all programs may support this; if this errors, try saying no.\n> ').lower().startswith('y') # local means 'Am I trying to avoid sudo/install in home?'
 
 print('(i) SULPM: Preparing to unpack.')
 
@@ -133,7 +133,10 @@ for file in JSON:
 
     if handle == 'executable':
         try:
-            os.chmod(filename, os.stat(filename).st_mode | 0o111)
+            if local:
+                os.chmod(filename, os.stat(filename).st_mode | 0o111)
+            else:
+                os.system(f'sudo chmod +x {filename}')
         except Exception as e:
             print(f'(!) SULPM: could not set executable bit for {filename}: {e}')
 
