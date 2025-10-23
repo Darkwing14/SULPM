@@ -1,6 +1,6 @@
 {
   "creator": "Darkwing14",
   "version": "1.0.0",
-  "#pacman4c": "pacman.py"
+  "#pacman4c": "pacman.py",
   "/usr/lib/python3.x/dist-packages/fcurses.py": "fcurses.py"
 }
